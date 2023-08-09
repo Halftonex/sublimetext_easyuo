@@ -1,0 +1,4 @@
+// These settings override both User and Default settings for the EasyUO syntax
+{
+	"color_scheme": "Packages/User/EasyUO..sublime-color-scheme"	
+}

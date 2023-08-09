@@ -1,0 +1,82 @@
+{
+    "name": "EasyUO Color Scheme",
+    "globals":
+    {
+        "background": "#292929",
+        "foreground": "#EEEEEE",
+        "caret": "white",
+        "selection" : "#49483E",
+        "find_highlight" : "#FFE894",
+        "line_highlight" : "#3A392F"
+    },
+    "rules":
+    [
+        {
+            "name": "Comment",
+            "scope": "comment",
+            "foreground": "#75715E",
+        },
+        {
+            "name": "Language",
+            "scope": "constant.language",
+            "foreground": "#FFD500",
+        },
+        {
+            "name": "Boolean",
+            "scope": "constant.language.boolean",
+            "foreground": "#8B4DFF",
+        },
+        {
+            "name": "Numbers",
+            "scope": "constant.numeric",
+            "foreground": "#BE84FF",
+        },
+        {
+            "name": "Numbers Hex",
+            "scope": "constant.numeric.hex",
+            "foreground": "#8B4DFF",
+        },
+        {
+            "name": "Flow Control",
+            "scope": "keyword.control",
+            "foreground": "#F92672",
+        },
+        {
+            "name": "Function Names",
+            "scope": "entity.name",
+            "foreground": "#A6E22E",
+        },
+        {
+            "name": "Client Commands",
+            "scope": "support.function",
+            "foreground": "#66D9EF",
+        },
+        {
+            "name": "Obsolete Commands",
+            "scope": "invalid.deprecated",
+            "background": "#FF0000",
+            "foreground": "#FFFFFF", 
+        },
+        {
+            "name": "System Variables",
+            "scope": "variable.language",
+            "foreground": "#FFD500",
+            "font_style" : "italic",
+        },
+        {
+            "name": "Standard Variables",
+            "scope": "variable.other",
+            "foreground": "#FFEECC",
+        },
+        {
+            "name": "Operators",
+            "scope": "keyword.operator",
+            "foreground": "#CC0000",
+        },
+        {
+            "name": "Character Escape",
+            "scope": "constant.character.escape",
+            "foreground": "#DF9F9F",
+        }
+    ]
+}

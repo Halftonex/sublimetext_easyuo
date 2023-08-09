@@ -1,0 +1,69 @@
+%YAML 1.2
+---
+# Sublime Text 3 EasyUO Syntax Highlighting by Halftone
+
+name: EasyUO
+file_extensions:
+  - euo
+scope: source.euo
+contexts:
+  main:
+    - match: ';.*'
+      scope: comment.line.euo
+
+    - match: '#(SPC|DOT|SMC)\b'
+      scope: constant.language.euo
+
+    - match: '#TRUE'
+      scope: constant.language.boolean.true.euo
+
+    - match: '#FALSE'
+      scope: constant.language.boolean.false.euo
+
+    - match: '\s+[\-0-9_]+\b'
+      scope: constant.numeric.euo
+
+    - match: '\s+(\$)\h{6}'
+      scope: constant.numeric.hex.euo
+
+    - match: '\b(break|continue|exit|for|halt|if|else|pause|repeat|until|return|stop|while)\b'
+      scope: keyword.control.euo
+
+    - match: '^\s*(call|gosub|goto)\s([a-zA-Z0-9_]+)\b'
+      scope: meta.function.euo
+      captures:
+        1: keyword.control.euo
+        2: entity.name.function.euo
+
+    - match: '^\s*(set|chooseSkill|click|cmpPix|contPos|deleteJournal|findItem|getShopInfo|getUOTitle|hideItem|ignoreItem|key|move|msg|nextCPos|onHotKey|savePix|setShopItem|setUOTitle|scanJournal|sleep|target|terminate|uoXL|wait|event Drag|event ExMsg|event Macro|event PathFind|event Property|event SkillLock|event Sleep|event SysMessage|exevent Drag|exevent Dropc|exevent Droppd|exevent Dropg|exevent Popup|exevent RenamePet|exevent SkillLock|exevent StatLock|menu Activate|menu Button|menu Check|menu Clear|menu Combo Create|menu Combo Add|menu Combo Select|menu Delete|menu Edit|menu Font Align|menu Font BGColor|menu Font Color|menu Font Name|menu Font Size|menu Font Style|menu Font Transparent|menu Get|menu GetNum|menu Hide|menu HideEUO|menu Image Create|menu Image Ellipse|menu Image File|menu Image FloodFill|menu Image Line|menu Image Pix|menu Image PixLine|menu Image Pos|menu Image Rectangle|menu List Create|menu List Add|menu List Select|menu Set|menu Shape|menu Show|menu Text|menu Window Color|menu Window Size|menu Window Title|menu Window Transparent|nameSpace local|nameSpace global|nameSpace clear|nameSpace push|nameSpace pop|nameSpace copy|display|execute|linesPerCycle|set|send|shutDown|sound|str Len|str Pos|str Left|str Right|str Mid|str Lower|str Ins|str Del|str Count|tile Init|tile Cnt|tile Get)\b'
+      scope: support.function.euo
+
+    - match: '^\s*(deleteVar|initEvents)\b'
+      scope: invalid.deprecated.euo  
+
+    - match: '#(CHARPOSX|CHARPOSY|CHARPOSZ|CHARDIR|CHARSTATUS|CHARID|CHARGHOST|BACKPACKID|CHARNAME|SEX|STR|HITS|MAXHITS|DEX|STAMINA|MAXSTAM|INT|MANA|MAXMANA|MAXSTATS|LUCK|WEIGHT|MAXWEIGHT|MINDMG|MAXDMG|GOLD|FOLLOWERS|MAXFOL|AR|FR|CR|PR|ER|TP|NEXTCPOSX|NEXTCPOSY|CONTSIZE|CONTPOSX|CONTPOSY|CONTKIND|CONTID|CONTTYPE|CONTNAME|CONTHP|LOBJECTID|LOBJECTTYPE|LTARGETID|LTARGETX|LTARGETY|LTARGETZ|LTARGETKIND|LTARGETTILE|LLIFTEDID|LLIFTEDTYPE|LLIFTEDKIND|LSKILL|LSPELL|FINDID|FINDTYPE|FINDX|FINDY|FINDZ|FINDDIST|FINDKIND|FINDSTACK|FINDBAGID|FINDMOD|FINDREP|FINDCOL|FINDINDEX|FINDCNT|SHOPCURPOS|SHOPCNT|SHOPITEMTYPE|SHOPITEMID|SHOPITEMNAME|SHOPITEMPRICE|SHOPITEMMAX|SKILL|SKILLCAP|SKILLLOCK|JOURNAL|JINDEX|JCOLOR|SYSMSG|SYSMSGCOL|TARGCURS|CURSKIND|CLIVER|CLICNT|CLINR|CLIXRES|CLIYRES|CLILEFT|CLITOP|CLILOGGED|CLILANG|CLITITLE|LHANDID|RHANDID|ENEMYHITS|ENEMYID|NSNAME|NSTYPE|SHARD|DATE|TIME|SYSTIME|SCNT|SCNT2|PIXCOL|CURSORX|CURSORY|RANDOM|DISPRES|LSHARD|OSVER|EUOVER|MENUBUTTON|MENURES|SENDHEADER|STRRES|PROPERTY|RESULT|OPTS|LPC|TILETYPE|TILEZ|TILECNT|TILENAME|TILEFLAGS|CURPATH)\b'
+      scope: variable.language.euo
+
+    - match: '(%|!|\*)[a-zA-Z0-9_]+\b'
+      scope: variable.other.euo
+  
+    - match: '^\s*(sub)\s([a-zA-Z0-9_]+)\b'
+      scope: meta.function.euo
+      captures:
+        1: support.function.euo
+        2: entity.name.function.euo
+
+    - match: '^\s*([a-zA-Z0-9_]+)\:'
+      scope: entity.name.label.euo
+
+    - match: '[\{\}]'
+      scope: meta.brace.curly.euo
+
+    - match: '[\(\)]'
+      scope: meta.brace.round.euo
+
+    - match: '\${1}'
+      scope: constant.character.escape.euo
+    
+    - match: '\s(!|\+|\-|\*|\/|\,|\.|&&|\|\||ABS|%|<|>|=|<>|<=|>=|in|notin)\s'
+      scope: keyword.operator.euo
