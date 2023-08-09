@@ -1,4 +1,4 @@
-# sublimetext_easyuo
+# SublimeText EasyUO
 EasyUO integration for SublimeText
 
 ## License
